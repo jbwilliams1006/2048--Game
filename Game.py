@@ -77,7 +77,8 @@ WIDTH = 640
 HEIGHT = 480
 display = pygame.display.set_mode([WIDTH, HEIGHT])
 pygame.display.set_caption("2048 Game by Izzy and Josh")
-gui_font = pygame.font.Font(None,30)
+gui_font = pygame.font.Font('freesansbold.ttf',24)
+print(pygame.font.get_fonts())
 font = pygame.font.Font('freesansbold.ttf',24)
 
 button3 = Button('USA',75,40,(528,25),5)
@@ -301,8 +302,8 @@ def new_pieces(board):
 
 def drawBoard():
   pygame.draw.rect(display, GameColor['bg'], [125, 25, 400, 400], 0, 10)
-  score_text = font.render(f'Score: {score}', True, 'black')
-  display.blit(score_text, (10, 410))
+  score_text = font.render(f'Your Score: {score}', True, GameColor['light text'])
+  display.blit(score_text, (250, 425))
   pass
 
 
