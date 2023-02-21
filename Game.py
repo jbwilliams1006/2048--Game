@@ -89,7 +89,6 @@ HEIGHT = 480
 display = pygame.display.set_mode([WIDTH, HEIGHT])
 pygame.display.set_caption("2048+")
 gui_font = pygame.font.Font('freesansbold.ttf',24)
-print(pygame.font.get_fonts())
 font = pygame.font.Font('freesansbold.ttf',24)
 
 button3 = Button('USA',75,40,(528,25),5)
@@ -283,11 +282,13 @@ score = 0
 """
 
 def draw_over():
-    pygame.draw.rect(display, 'black', [50, 50, 300, 100], 0, 10)
-    game_over_text1 = font.render('Game Over!', True, 'white')
+    pygame.draw.rect(display, GameColor['dark text'], [50, 50, 400, 125], 0, 10)
+    game_over_text1 = font.render('Game over', True, 'white')
     game_over_text2 = font.render('Press Enter to Restart', True, 'white')
+    game_over_text3 = font.render('Or Just keep playing the drums', True, 'white')
     display.blit(game_over_text1, (130, 65))
     display.blit(game_over_text2, (70, 105))
+    display.blit(game_over_text3, (70, 130))
 
 
 #function that takes turn for user 
