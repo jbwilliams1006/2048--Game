@@ -256,7 +256,7 @@ GameColor_Finland = {
 }
 
 #List of values for board
-tile_vals = [[2048 for _ in range(4)] for _ in range(4)]
+tile_vals = [[0 for _ in range(4)] for _ in range(4)]
 
 game_over = False
 
